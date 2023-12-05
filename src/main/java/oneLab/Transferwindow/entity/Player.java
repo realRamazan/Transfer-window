@@ -16,13 +16,28 @@ public class Player {
     @Column(name = "teamId")
     int teamId;
 
+    @Column(name = "currentPrice")
+    Double currentPrice;
+
+    @Column(name = "position")
+    String position;
+
     public Player() {
     }
 
-    public Player(String name, String surname, int teamId) {
+    public Player(String name, String surname, int teamId, Double currentPrice) {
         this.name = name;
         this.surName = surname;
         this.teamId = teamId;
+        this.currentPrice = currentPrice;
+    }
+
+    public Double getCurrentPrice() {
+        return currentPrice;
+    }
+
+    public void setCurrentPrice(Double currentPrice) {
+        this.currentPrice = currentPrice;
     }
 
     public String getName() {
